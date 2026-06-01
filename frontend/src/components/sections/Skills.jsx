@@ -1,4 +1,4 @@
-import '../styles/components/Skills.css'
+import '../../styles/components/Skills.css'
 
 const skillCategories = [
   {

@@ -1,4 +1,4 @@
-import '../styles/components/About.css'
+import '../../styles/components/About.css'
 
 const stats = [
   { value: '20+', label: 'Projects Completed' },

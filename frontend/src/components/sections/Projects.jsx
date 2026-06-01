@@ -1,4 +1,4 @@
-import '../styles/components/Projects.css'
+import '../../styles/components/Projects.css'
 
 const projects = [
   {

@@ -1,4 +1,4 @@
-import '../styles/components/Experience.css'
+import '../../styles/components/Experience.css'
 
 const experiences = [
   {

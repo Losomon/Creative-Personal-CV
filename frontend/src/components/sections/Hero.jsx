@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import '../styles/components/Hero.css'
+import '../../styles/components/Hero.css'
 
 export default function Hero() {
   const heroRef = useRef(null)

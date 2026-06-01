@@ -1,4 +1,4 @@
-import '../styles/components/Testimonials.css'
+import '../../styles/components/Testimonials.css'
 
 const testimonials = [
   {
