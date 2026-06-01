@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './styles/App.css'
+import './styles/index.css'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Skills from './components/sections/Skills'
