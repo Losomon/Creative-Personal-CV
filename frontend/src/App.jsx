@@ -4,7 +4,7 @@ import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Skills from './components/sections/Skills'
 import Projects from './components/sections/Projects'
-import Experience from './components/sections/Experience'
+import Journey from './components/sections/Journey'
 import Testimonials from './components/sections/Testimonials'
 import Contact from './components/sections/Contact'
 
@@ -12,7 +12,8 @@ const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
+  { label: 'Journey', href: '#journey' },
+  { label: 'Testimonials', href: '#testimonials' },
   { label: 'Contact', href: '#contact' }
 ]
 
@@ -69,7 +70,7 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
-        <Experience />
+        <Journey />
         <Testimonials />
         <Contact />
       </main>

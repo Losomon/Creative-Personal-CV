@@ -1,109 +1,52 @@
 .about {
-  background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 50%, var(--bg) 100%);
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.about-story .section-title {
-  margin-bottom: 24px;
-}
-
-.about-text {
-  color: var(--muted);
-  font-size: 17px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.about-highlights {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-top: 40px;
-}
-
-.highlight-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.highlight-icon {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--surface2);
-  border-radius: var(--radius-sm);
-  color: var(--accent);
-  flex-shrink: 0;
-}
-
-.highlight-item h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.highlight-item p {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-/* Stats Grid */
-.about-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.stat-card {
-  padding: 40px;
+  padding: 100px 0;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
 }
 
-.stat-value {
-  font-family: var(--font-display);
-  font-size: 48px;
-  font-weight: 600;
-  color: var(--accent);
-  line-height: 1;
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 5rem;
 }
 
-.stat-label {
-  font-size: 14px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
+@media (max-width: 968px) {
+  .container {
+    padding: 0 30px;
   }
 }
 
 @media (max-width: 640px) {
-  .about-stats {
-    grid-template-columns: 1fr 1fr;
+  .container {
+    padding: 0 20px;
   }
+}
 
-  .stat-card {
-    padding: 30px 20px;
-  }
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: block;
+}
 
-  .stat-value {
-    font-size: 36px;
-  }
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: var(--text);
+}
+
+.about-content {
+  max-width: 100%;
+}
+
+.about-content p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
