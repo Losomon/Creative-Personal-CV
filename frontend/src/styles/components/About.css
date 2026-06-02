@@ -1,52 +1,85 @@
-.about {
-  padding: 100px 0;
-  text-align: center;
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  padding: 80px 56px 70px;
+  border-top: 1px solid rgba(212,175,55,.1);
+  position: relative;
 }
-
-.container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 5rem;
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 72px;
+  align-items: start;
+  margin-bottom: 48px;
 }
-
-@media (max-width: 968px) {
-  .container {
-    padding: 0 30px;
-  }
+.about-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 1.06;
+  color: #f5f1e8;
+  letter-spacing: -.025em;
 }
-
-@media (max-width: 640px) {
-  .container {
-    padding: 0 20px;
-  }
+.about-heading em { color: #d4af37; }
+.about-body {
+  font-size: 14.5px;
+  color: rgba(240,236,224,.48);
+  line-height: 1.78;
+  font-weight: 300;
+  margin-bottom: 26px;
 }
-
-.section-label {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 3px;
+.about-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+}
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(240,236,224,.52);
+  font-weight: 300;
+}
+.meta-row i {
+  font-size: 15px;
+  color: #d4af37;
+  flex-shrink: 0;
+}
+.tech-strip {
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(212,175,55,.1);
+  border-radius: 12px;
+  padding: 18px 26px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.ts-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(240,236,224,.3);
+  letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 20px;
-  display: block;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
-
-.section-title {
-  font-family: var(--font-display);
-  font-size: clamp(36px, 5vw, 56px);
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 30px;
-  color: var(--text);
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
 }
-
-.about-content {
-  max-width: 100%;
+.pill {
+  font-size: 11.5px;
+  color: rgba(240,236,224,.5);
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(240,236,224,.09);
+  border-radius: 20px;
+  padding: 5px 12px;
+  transition: all .2s;
 }
-
-.about-content p {
-  color: var(--muted);
-  font-size: 17px;
-  line-height: 1.8;
-  margin-bottom: 20px;
+.pill:hover,
+.pill-g {
+  border-color: rgba(212,175,55,.38);
+  color: #d4af37;
+  background: rgba(212,175,55,.06);
 }

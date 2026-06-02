@@ -1,26 +1,26 @@
 import { useState, useEffect } from 'react'
 import './styles/App.css'
-import './styles/index.css'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
+import PersonalStatement from './components/sections/PersonalStatement'
 import Skills from './components/sections/Skills'
 import Projects from './components/sections/Projects'
-import Journey from './components/sections/Journey'
+import Experience from './components/sections/Experience'
 import Testimonials from './components/sections/Testimonials'
 import Contact from './components/sections/Contact'
+
 
 const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Journey', href: '#journey' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Testimonials', href: '#testimonials' },
   { label: 'Contact', href: '#contact' }
 ]
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +35,6 @@ export default function App() {
     const element = document.querySelector(href)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
-      setMenuOpen(false)
     }
   }
 
@@ -46,13 +45,9 @@ export default function App() {
 
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-inner">
-          <a href="#" className="logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>
-            <span className="logo-bracket">&lt;</span>
-            <span className="logo-name">SM</span>
-            <span className="logo-bracket">/&gt;</span>
-          </a>
+          <a href="#" className="logo">&lt;SM/&gt;</a>
 
-          <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          <div className={`nav-links`}>
             {navLinks.map(link => (
               <a key={link.href} href={link.href} onClick={(e) => scrollToSection(e, link.href)}>
                 {link.label}
@@ -60,18 +55,19 @@ export default function App() {
             ))}
           </div>
 
-          <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
-            <span className={`hamburger ${menuOpen ? 'open' : ''}`} />
+          <button className="btn-cv" onClick={() => {}}>
+            Download CV
           </button>
         </div>
       </nav>
 
       <main>
         <Hero />
+        <PersonalStatement />
         <About />
         <Skills />
         <Projects />
-        <Journey />
+        <Experience />
         <Testimonials />
         <Contact />
       </main>

@@ -33,7 +33,7 @@
   gap: 16px;
 }
 
-.year-header {
+.year-title {
   font-size: 18px;
   font-weight: 600;
   color: var(--accent);
