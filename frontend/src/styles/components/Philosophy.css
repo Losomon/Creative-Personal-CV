@@ -1,0 +1,125 @@
+/* ===== PHILOSOPHY SECTION ===== */
+.philosophy-section {
+  padding: 100px 56px;
+  border-top: 1px solid rgba(212,175,55,.08);
+  text-align: center;
+  position: relative;
+}
+
+.phil-header {
+  margin-bottom: 60px;
+}
+
+.phil-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  font-weight: 900;
+  color: #f5f1e8;
+  letter-spacing: -.025em;
+  line-height: 1.08;
+  margin-bottom: 16px;
+}
+
+.phil-title em {
+  color: #d4af37;
+}
+
+.phil-desc {
+  font-size: 15px;
+  color: rgba(240,236,224,.5);
+  line-height: 1.75;
+  font-weight: 300;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.phil-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+.phil-stat-card {
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(212,175,55,.12);
+  border-radius: 12px;
+  padding: 22px 10px;
+  transition: all .25s;
+}
+
+.phil-stat-card:hover {
+  background: rgba(212,175,55,.05);
+  border-color: rgba(212,175,55,.28);
+  transform: translateY(-3px);
+}
+
+.phil-stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #d4af37;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.phil-stat-lbl {
+  font-size: 11px;
+  color: rgba(240,236,224,.45);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 400;
+}
+
+.phil-values {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 70px;
+}
+
+.phil-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(240,236,224,.75);
+  border: 1px solid rgba(240,236,224,.18);
+  border-radius: 24px;
+  padding: 9px 22px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  transition: all .22s;
+}
+
+.phil-value:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+  background: rgba(212,175,55,.06);
+}
+
+.phil-manifesto {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #f5f1e8;
+  letter-spacing: -.01em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.phil-manifesto .gold {
+  color: #d4af37;
+}
+
+@media (max-width: 900px) {
+  .philosophy-section { padding: 70px 30px; }
+  .phil-stats { grid-template-columns: repeat(2, 1fr); }
+  .phil-title { font-size: 34px; }
+  .phil-manifesto { font-size: 26px; }
+}
+
+@media (max-width: 480px) {
+  .phil-stats { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .phil-manifesto { font-size: 22px; }
+}

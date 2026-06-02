@@ -1,104 +1,135 @@
+/* ===== APPROACH SECTION ===== */
 .approach {
-  padding: 6rem 0;
+  padding: 80px 56px;
+  border-top: 1px solid rgba(212,175,55,.08);
   position: relative;
-  overflow: hidden;
 }
 
-.approach::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.02) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.approach-header {
+.phil-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 48px;
 }
 
-.section-label {
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  background: linear-gradient(to right, #ffd700, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.section-title {
+.phil-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 0;
-  color: #ffffff;
+  font-size: 40px;
+  font-weight: 900;
+  color: #f5f1e8;
+  letter-spacing: -.025em;
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.phil-title em { color: #d4af37; }
+
+.phil-desc {
+  font-size: 14.5px;
+  color: rgba(240,236,224,.48);
+  line-height: 1.75;
+  font-weight: 300;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: #d4af37;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: #d4af37;
 }
 
 .approach-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.approach-item {
-  background: rgba(30, 30, 30, 0.6);
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  border-radius: 16px;
-  padding: 2.5rem;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  text-align: center;
+.approach-card {
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(212,175,55,.12);
+  border-radius: 18px;
+  padding: 34px 28px;
+  text-align: left;
   position: relative;
   overflow: hidden;
+  transition: all .25s;
 }
 
-.approach-item:hover {
-  transform: translateY(-5px);
-  border-color: rgba(255, 215, 0, 0.4);
-  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.1);
+.approach-card:hover {
+  background: rgba(212,175,55,.05);
+  border-color: rgba(212,175,55,.28);
+  transform: translateY(-4px);
 }
 
-.approach-number {
-  font-size: 3rem;
-  font-weight: 700;
-  color: rgba(255, 215, 0, 0.2);
-  margin-bottom: 1.5rem;
-  display: block;
+.ap-bg-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 88px;
+  font-weight: 900;
+  color: rgba(212,175,55,.08);
   line-height: 1;
+  margin-bottom: 14px;
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
-.approach-title {
-  font-size: 1.5rem;
+.ap-icon {
+  position: relative;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(212,175,55,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  font-size: 20px;
+  margin: 0 auto 16px;
+}
+
+.ap-title {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
   font-weight: 600;
-  margin-bottom: 1rem;
-  color: #ffffff;
+  color: #f5f1e8;
+  margin-bottom: 10px;
 }
 
-.approach-description {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #e0e0e0;
+.ap-desc {
+  position: relative;
+  z-index: 1;
+  font-size: 12.5px;
+  color: rgba(240,236,224,.45);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .approach-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .approach-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
+  .approach { padding: 60px 30px; }
+  .approach-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .phil-title { font-size: 32px; }
 }
