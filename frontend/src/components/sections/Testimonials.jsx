@@ -3,54 +3,52 @@ import '../../styles/components/Testimonials.css'
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: "Solomon delivers clean, premium interfaces with strong attention to detail. His work elevated our entire product.",
-      author: "James Mitchell",
-      role: "Product Lead",
-      company: "Tech Academy",
-      image: "/placeholder-client1.jpg"
+      quote: '"Solomon is an exceptional developer — his attention to detail and ability to deliver clean, scalable code on tight deadlines is truly impressive. One of the best I\'ve worked with."',
+      name: 'James Kariuki',
+      role: 'CTO — FinTech Africa Ltd',
+      colorClass: 'ta-1',
+      initials: 'JK'
     },
     {
-      quote: "Exceptional frontend skills combined with a keen eye for design. Every project exceeded expectations.",
-      author: "Sarah Chen",
-      role: "Creative Director",
-      company: "Design Studio",
-      image: "/placeholder-client2.jpg"
+      quote: '"The most reliable and highly skilled developer I\'ve ever worked with. He built our entire platform from scratch and the result was beyond what we imagined. Absolutely recommend."',
+      name: 'Amina Njoroge',
+      role: 'Founder — Savanna EdTech',
+      colorClass: 'ta-2',
+      initials: 'AN'
     },
     {
-      quote: "A developer who truly understands both code and aesthetics. The perfect balance of function and form.",
-      author: "Michael Oduya",
-      role: "CTO",
-      company: "Startup Hub",
-      image: "/placeholder-client3.jpg"
+      quote: '"Solomon transformed our outdated system into a beautifully designed, blazing-fast web application. Communication was always clear and he always delivered ahead of schedule."',
+      name: 'David Mwenda',
+      role: 'Product Manager — TechHub KE',
+      colorClass: 'ta-3',
+      initials: 'DM'
     }
-  ];
+  ]
 
   return (
-    <section className="testimonials" id="testimonials">
-      <div className="container">
-        <div className="testimonials-header">
-          <span className="section-label">Testimonials</span>
-          <h2 className="section-title">What people say</h2>
-        </div>
-
-        <div className="testimonials-grid">
-          {testimonials.map((t, index) => (
-            <div key={index} className="testimonial-card glass-card">
-              <div className="quote-mark">"</div>
-              <p className="testimonial-quote">{t.quote}</p>
-              <div className="testimonial-author">
-                <div className="author-avatar">
-                  <img src={t.image} alt={`${t.author} avatar`} />
-                </div>
-                <div className="author-info">
-                  <span className="author-name">{t.author}</span>
-                  <span className="author-role">{t.role}</span>
-                  <span className="author-company">{t.company}</span>
-                </div>
+    <section className="testi-section reveal" id="testimonials">
+      <div style={{textAlign: 'center'}}>
+        <div className="eyebrow" style={{justifyContent: 'center', marginBottom: 12}}>What People Say</div>
+        <h2 className="section-title">Client <em>Testimonials</em></h2>
+      </div>
+      <div className="testi-grid">
+        {testimonials.map((t, i) => (
+          <div key={i} className="testi-card">
+            <div className="testi-stars">
+              {Array(5).fill('<i className="ti ti-star-filled" />').map((icon, j) => (
+                <i key={j} className="ti ti-star-filled" />
+              ))}
+            </div>
+            <p className="testi-quote">{t.quote}</p>
+            <div className="testi-author">
+              <div className={`testi-avatar ${t.colorClass}`}>{t.initials}</div>
+              <div>
+                <div className="testi-name">{t.name}</div>
+                <div className="testi-role">{t.role}</div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   )

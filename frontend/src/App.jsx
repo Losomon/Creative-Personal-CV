@@ -38,10 +38,28 @@ export default function App() {
     }
   }
 
+  useEffect(() => {
+    const elements = document.querySelectorAll('.reveal')
+    if (!elements.length) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('visible')
+        })
+      },
+      { threshold: 0.08 }
+    )
+
+    elements.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div className="app">
       <div className="bg-grid" />
       <div className="noise-overlay" />
+
 
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-inner">
