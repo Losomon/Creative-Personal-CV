@@ -29,93 +29,92 @@ export default function Hero() {
 
   return (
     <section className="hero" ref={heroRef}>
-      <div className="hero-glow" ref={glowRef} />
+      <div className="bg-grid" />
+      <div className="bg-glow-1" />
+      <div className="bg-glow-2" />
 
-      <div className="container hero-container">
-        <div className="hero-content">
-          <span className="hero-intro animate-fade-up">Hello, I'm</span>
-          <h1 className="hero-name animate-fade-up animate-delay-1">
-            Solomon<br />Mwangi
+      {/* 3-Column Hero */}
+      <div className="hero-grid">
+        {/* LEFT: Text */}
+        <div className="hero-text-col">
+          <p className="greeting">Hi, I'm</p>
+          <h1 className="hero-heading">
+            Solomon<br />
+            Mwangi
           </h1>
-          <p className="hero-role animate-fade-up animate-delay-2">
-            Full-Stack Developer
+          <p className="hero-role">Full-Stack Developer & UI Enthusiast</p>
+          <p className="hero-desc">
+            I design and build premium digital experiences that are fast,
+            scalable and unforgettable.
           </p>
-          <p className="hero-tagline animate-fade-up animate-delay-3">
-            Crafting premium digital experiences with modern technologies.
-          </p>
-
-          <div className="hero-buttons animate-fade-up animate-delay-4">
-            <button className="btn btn-primary">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
-                <polyline points="7.5 19.79 7.5 14.6 3 12"/>
-                <polyline points="21 12 16.5 14.6 16.5 19.79"/>
-                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                <line x1="12" y1="22.08" x2="12" y2="12"/>
-              </svg>
-              View Projects
+          <div className="hero-actions">
+            <button className="btn-primary">
+              View My Work <i className="ti ti-arrow-right" />
             </button>
-            <button className="btn btn-outline">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
-              </svg>
-              Download CV
+            <button className="btn-secondary">
+              <i className="ti ti-send" /> Hire Me
             </button>
+          </div>
+          <div className="social-links">
+            <a href="#" className="social-link" aria-label="GitHub">
+              <i className="ti ti-brand-github" />
+            </a>
+            <a href="#" className="social-link" aria-label="LinkedIn">
+              <i className="ti ti-brand-linkedin" />
+            </a>
+            <a href="#" className="social-link" aria-label="Twitter">
+              <i className="ti ti-brand-twitter" />
+            </a>
+            <a href="#" className="social-link" aria-label="Email">
+              <i className="ti ti-mail" />
+            </a>
           </div>
         </div>
 
-        <div className="hero-visual animate-fade-up animate-delay-2">
-          <div className="hero-code-window">
-            <div className="window-header">
-              <div className="window-dots">
-                <span></span>
-                <span></span>
-                <span></span>
+        {/* CENTER: Photo */}
+        <div className="hero-visual-col">
+          <div className="photo-container">
+            <div className="orbit-ring-2">
+              <div className="orbit-dot-2" />
+            </div>
+            <div className="orbit-ring">
+              <div className="orbit-dot" />
+            </div>
+            <div className="photo-circle">
+              <span className="photo-monogram">SM</span>
+            </div>
+            <div className="accent-arc">
+              <div className="freelance-badge">
+                <div className="pulse-dot" />
+                Available for Freelance
               </div>
-              <span className="window-title">portfolio.tsx</span>
             </div>
-            <div className="window-content">
-              <div className="code-line"><span className="code-keyword">const</span> <span className="code-variable">developer</span> = {'{'}</div>
-              <div className="code-line indent">name: <span className="code-string">"Solomon Mwangi"</span>,</div>
-              <div className="code-line indent">role: <span className="code-string">"Full-Stack Developer"</span>,</div>
-              <div className="code-line indent">focus: <span className="code-string">"Premium Web Experiences"</span>,</div>
-              <div className="code-line indent">stack: [<span className="code-string">"React"</span>, <span className="code-string">"Node.js"</span>, <span className="code-string">"TypeScript"</span>]</div>
-              <div className="code-line">{'}'}</div>
-              <div className="code-line">&nbsp;</div>
-              <div className="code-line"><span className="code-function">export default</span> <span className="code-variable">developer</span></div>
-              <div className="cursor-blink" />
-            </div>
-          </div>
-
-          <div className="floating-badge badge-1">
-            <span className="badge-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-              </svg>
-            </span>
-            Premium Quality
-          </div>
-          <div className="floating-badge badge-2">
-            <span className="badge-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-              </svg>
-            </span>
-            Lightning Fast
           </div>
         </div>
-      </div>
 
-      <div className="scroll-indicator">
-        <span>Scroll to explore</span>
-        <div className="scroll-arrow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <line x1="12" y1="5" x2="12" y2="19"/>
-            <polyline points="19 12 12 19 5 12"/>
-          </svg>
+        {/* RIGHT: Stats */}
+        <div className="stats-col">
+          <div className="stat-card">
+            <div className="stat-icon-wrap"><i className="ti ti-rocket" /></div>
+            <div>
+              <div className="stat-num">20+</div>
+              <div className="stat-lbl">Projects Completed</div>
+            </div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-icon-wrap"><i className="ti ti-code" /></div>
+            <div>
+              <div className="stat-num">3+</div>
+              <div className="stat-lbl">Years Experience</div>
+            </div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-icon-wrap"><i className="ti ti-star" /></div>
+            <div>
+              <div className="stat-num">95%</div>
+              <div className="stat-lbl">Client Satisfaction</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

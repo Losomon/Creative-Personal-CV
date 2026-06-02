@@ -10,14 +10,13 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 24px 0;
-  transition: var(--transition);
+  padding: 22px 0;
+  background: #0a0a0a;
+  border-bottom: 1px solid rgba(212,175,55,0.12);
 }
 
 .navbar.scrolled {
-  background: var(--glass);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
   padding: 16px 0;
 }
 
@@ -28,53 +27,65 @@
 }
 
 .logo {
-  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-family: var(--font-display);
   font-size: 20px;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
-.logo-bracket {
   color: var(--accent);
-}
-
-.logo-name {
-  color: var(--text);
+  letter-spacing: 0.01em;
+  text-decoration: none;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 28px;
+  list-style: none;
 }
 
 .nav-links a {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--muted);
-  transition: var(--transition);
+  font-size: 13.5px;
+  color: rgba(240,236,224,0.55);
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  transition: color 0.22s;
   position: relative;
 }
 
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: -3px;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   background: var(--accent);
-  transition: var(--transition);
+  transition: width 0.22s;
 }
 
-.nav-links a:hover {
-  color: var(--text);
+.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover::after { width: 100%; }
+
+.btn-cv {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  font-size: 12.5px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  padding: 9px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: all 0.22s;
+  text-transform: uppercase;
 }
 
-.nav-links a:hover::after {
-  width: 100%;
+.btn-cv:hover {
+  background: rgba(212,175,55,0.12);
+  box-shadow: 0 0 20px rgba(212,175,55,0.15);
 }
 
 /* Hamburger Menu */

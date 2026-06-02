@@ -1,49 +1,38 @@
 import '../../styles/components/Skills.css'
 
-const skillCategories = [
-  {
-    title: 'Frontend',
-    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind'],
-    icons: ['🎨', '⚡', '💛', '⚛️', '🎭']
-  },
-  {
-    title: 'Backend',
-    skills: ['Node.js', 'Firebase', 'MongoDB', 'Express', 'APIs'],
-    icons: ['🟢', '🔥', '🍃', '🚂', '🔗']
-  },
-  {
-    title: 'Tools & More',
-    skills: ['Git', 'Figma', 'VS Code', 'Vercel', 'npm'],
-    icons: ['📦', '🎨', '💻', '▲', '📥']
-  }
-]
-
 export default function Skills() {
-  return (
-    <section className="skills" id="skills">
-      <div className="container">
-        <div className="skills-header">
-          <span className="section-label">Skills & Technologies</span>
-          <h2 className="section-title">My technical arsenal</h2>
-        </div>
+  const skillsData = [
+    { name: 'Frontend', level: 95 },
+    { name: 'Backend', level: 90 },
+    { name: 'Database', level: 85 },
+    { name: 'UI/UX', level: 90 },
+    { name: 'Tools', level: 85 },
+    { name: 'Mobile', level: 80 },
+  ]
 
-        <div className="skills-grid">
-          {skillCategories.map((category, catIndex) => (
-            <div key={catIndex} className="skill-category glass-card">
-              <h3 className="category-title">{category.title}</h3>
-              <div className="skill-cards">
-                {category.skills.map((skill, skillIndex) => (
-                  <div
-                    key={skillIndex}
-                    className="skill-card"
-                    style={{ animationDelay: `${catIndex * 0.1 + skillIndex * 0.05}s` }}
-                  >
-                    <span className="skill-icon">{category.icons[skillIndex]}</span>
-                    <span className="skill-name">{skill}</span>
-                  </div>
-                ))}
+  return (
+    <section className="skills-section reveal" id="skills">
+      <div className="container-skills">
+        <div className="eyebrow">My Technical Arsenal</div>
+        <h2 className="section-title">What I Bring<br /><em>to the Table</em></h2>
+
+        <div className="skills-flex">
+          {skillsData.map((skill, index) => (
+            <div key={index} className="skill-card">
+              <div className="skill-top">
+                <span className="skill-name">{skill.name}</span>
+                <span className="skill-percent">{skill.level}%</span>
+              </div>
+              <div className="skill-track">
+                <div className="skill-fill" style={{ width: `${skill.level}%` }} />
               </div>
             </div>
+          ))}
+        </div>
+
+        <div className="pills-row">
+          {['React', 'Next.js', 'Node.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'MongoDB', 'Docker', 'AWS', 'GraphQL', 'Python', 'Figma'].map((t, i) => (
+            <span key={i} className="pill">{t}</span>
           ))}
         </div>
       </div>

@@ -1,24 +1,30 @@
 import '../../styles/components/Testimonials.css'
 
-const testimonials = [
-  {
-    quote: "Solomon delivers clean, premium interfaces with strong attention to detail. His work elevated our entire product.",
-    author: "James Mitchell",
-    role: "Product Lead, Tech Academy"
-  },
-  {
-    quote: "Exceptional frontend skills combined with a keen eye for design. Every project exceeded expectations.",
-    author: "Sarah Chen",
-    role: "Creative Director, Design Studio"
-  },
-  {
-    quote: "A developer who truly understands both code and aesthetics. The perfect balance of function and form.",
-    author: "Michael Oduya",
-    role: "CTO, Startup Hub"
-  }
-]
-
 export default function Testimonials() {
+  const testimonials = [
+    {
+      quote: "Solomon delivers clean, premium interfaces with strong attention to detail. His work elevated our entire product.",
+      author: "James Mitchell",
+      role: "Product Lead",
+      company: "Tech Academy",
+      image: "/placeholder-client1.jpg"
+    },
+    {
+      quote: "Exceptional frontend skills combined with a keen eye for design. Every project exceeded expectations.",
+      author: "Sarah Chen",
+      role: "Creative Director",
+      company: "Design Studio",
+      image: "/placeholder-client2.jpg"
+    },
+    {
+      quote: "A developer who truly understands both code and aesthetics. The perfect balance of function and form.",
+      author: "Michael Oduya",
+      role: "CTO",
+      company: "Startup Hub",
+      image: "/placeholder-client3.jpg"
+    }
+  ];
+
   return (
     <section className="testimonials" id="testimonials">
       <div className="container">
@@ -34,11 +40,12 @@ export default function Testimonials() {
               <p className="testimonial-quote">{t.quote}</p>
               <div className="testimonial-author">
                 <div className="author-avatar">
-                  {t.author.split(' ').map(n => n[0]).join('')}
+                  <img src={t.image} alt={`${t.author} avatar`} />
                 </div>
                 <div className="author-info">
                   <span className="author-name">{t.author}</span>
                   <span className="author-role">{t.role}</span>
+                  <span className="author-company">{t.company}</span>
                 </div>
               </div>
             </div>
