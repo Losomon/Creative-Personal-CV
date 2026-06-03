@@ -1,4 +1,5 @@
-# 2-Month Skill Projects (10 repos)
+# Solomon CV Portfolio & 2-Month Skill Projects (10 repos)
+
 
 This workspace contains planning files for building **10 individual, skill-focused technical projects** (10 separate GitHub repositories), scheduled over **2 months**.
 

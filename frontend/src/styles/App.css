@@ -146,7 +146,7 @@
   .menu-toggle {
     display: flex;
   }
-
+  
   .nav-links {
     position: fixed;
     top: 0;
@@ -161,13 +161,72 @@
     visibility: hidden;
     transition: var(--transition);
   }
-
+  
   .nav-links.open {
     opacity: 1;
     visibility: visible;
   }
-
+  
   .nav-links a {
     font-size: 24px;
   }
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid rgba(212,175,55,.1);
+  padding: 26px 64px;
+}
+
+.foot-inner {
+  display: flex;
+  align: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.f-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #d4af37;
+}
+
+.f-copy {
+  font-size: 12.5px;
+  color: rgba(255,255,255,.26);
+  font-weight: 300;
+}
+
+.f-socs {
+  display: flex;
+  gap: 10px;
+}
+
+.fsoc {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .22s;
+}
+
+.fsoc svg {
+  width: 15px;
+  height: 15px;
+  stroke: rgba(255,255,255,.35);
+  stroke-width: 2;
+  fill: none;
+  transition: stroke .22s;
+}
+
+.fsoc:hover {
+  border-color: #d4af37;
+}
+
+.fsoc:hover svg {
+  stroke: #d4af37;
 }
