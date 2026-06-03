@@ -1,85 +1,31 @@
 /* ===== ABOUT SECTION ===== */
-.about-section {
-  padding: 80px 56px 70px;
-  border-top: 1px solid rgba(212,175,55,.1);
-  position: relative;
+#about{
+  padding:100px 64px;
+  border-top:1px solid rgba(212,175,55,.1);
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
 }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 72px;
-  align-items: start;
-  margin-bottom: 48px;
-}
-.about-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 46px;
-  font-weight: 900;
-  line-height: 1.06;
-  color: #f5f1e8;
-  letter-spacing: -.025em;
-}
-.about-heading em { color: #d4af37; }
-.about-body {
-  font-size: 14.5px;
-  color: rgba(240,236,224,.48);
-  line-height: 1.78;
-  font-weight: 300;
-  margin-bottom: 26px;
-}
-.about-meta {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 11px;
-}
-.meta-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: rgba(240,236,224,.52);
-  font-weight: 300;
-}
-.meta-row i {
-  font-size: 15px;
-  color: #d4af37;
-  flex-shrink: 0;
-}
-.tech-strip {
-  background: rgba(255,255,255,.02);
-  border: 1px solid rgba(212,175,55,.1);
-  border-radius: 12px;
-  padding: 18px 26px;
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-.ts-label {
-  font-size: 10px;
-  font-weight: 500;
-  color: rgba(240,236,224,.3);
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-.pill {
-  font-size: 11.5px;
-  color: rgba(240,236,224,.5);
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(240,236,224,.09);
-  border-radius: 20px;
-  padding: 5px 12px;
-  transition: all .2s;
-}
-.pill:hover,
-.pill-g {
-  border-color: rgba(212,175,55,.38);
-  color: #d4af37;
-  background: rgba(212,175,55,.06);
-}
+.sec-ew{font-size:10.5px;font-weight:600;color:#d4af37;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.sec-ew::before{content:'';display:block;width:22px;height:1px;background:#d4af37;flex-shrink:0}
+.sec-ttl{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,50px);font-weight:900;color:#fff;letter-spacing:-.025em;line-height:1.08}
+.sec-ttl em{color:#d4af37;font-style:italic}
+
+.about-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(212,175,55,.28);border-radius:20px;padding:6px 16px;font-size:11px;font-weight:500;color:#d4af37;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px}
+.about-badge svg{width:13px;height:13px;stroke:#d4af37;stroke-width:2;fill:none}
+.about-body{font-size:15px;color:rgba(255,255,255,.46);line-height:1.8;font-weight:300;margin-bottom:28px;margin-top:18px}
+.about-meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px}
+.mi{display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(255,255,255,.5)}
+.mi svg{width:15px;height:15px;stroke:#d4af37;stroke-width:1.8;fill:none;flex-shrink:0}
+.tech-pills{display:flex;flex-wrap:wrap;gap:8px}
+.tpill{font-size:12px;color:rgba(255,255,255,.5);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:5px 14px;transition:all .2s}
+.tpill:hover,.tpill.active{border-color:rgba(212,175,55,.4);color:#d4af37;background:rgba(212,175,55,.06)}
+
+.about-right{display:flex;flex-direction:column;gap:18px}
+.astat-big{background:rgba(14,12,7,.9);border:1.5px solid rgba(212,175,55,.15);border-radius:18px;padding:32px 34px;position:relative;overflow:hidden}
+.astat-big::after{content:'';position:absolute;top:-30px;right:-30px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.07) 0%,transparent 65%);pointer-events:none}
+.asb-n{font-family:'Playfair Display',serif;font-size:68px;font-weight:900;color:#d4af37;line-height:1;margin-bottom:8px}
+.asb-l{font-size:13.5px;color:rgba(255,255,255,.38);font-weight:300}
+.astat-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.astat-sm{background:rgba(14,12,7,.9);border:1.5px solid rgba(255,255,255,.06);border-radius:14px;padding:24px 26px;transition:all .25s}
+.astat-sm:hover{border-color:rgba(212,175,55,.22)}
+.asn{font-family:'Playfair Display',serif;font-size:40px;font-weight:900;color:#d4af37;line-height:1;margin-bottom:6px}
+.asl{font-size:12px;color:rgba(255,255,255,.36);font-weight:300;line-height:1.5}

@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import './styles/App.css'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
-import PersonalStatement from './components/sections/PersonalStatement'
 import Skills from './components/sections/Skills'
 import Projects from './components/sections/Projects'
 import Experience from './components/sections/Experience'
@@ -81,7 +80,6 @@ export default function App() {
 
       <main>
         <Hero />
-        <PersonalStatement />
         <About />
         <Skills />
         <Projects />
