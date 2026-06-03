@@ -2,7 +2,7 @@ export default function Cta() {
   return (
     <div className="cta-bar reveal">
       <div>
-        <h2 className="cta-h">Have a project<br>in <em>mind?</em></h2>
+        <h2 className="cta-h">Have a project<br/>in <em>mind?</em></h2>
         <p className="cta-sub">Let's build something remarkable together. Get in touch.</p>
       </div>
       <div className="cta-ls">
