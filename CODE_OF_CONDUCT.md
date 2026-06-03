@@ -1,17 +1,36 @@
 # Code of Conduct
 
-This project follows a respectful collaboration standard.
+## Our Pledge
 
-## Expected behavior
-- Be kind and constructive.
-- Respect different viewpoints.
-- Provide feedback with evidence and intent.
+In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to make participation in this project a harassment-free experience for everyone.
 
-## Unacceptable behavior
-- Harassment, hate speech, or discrimination.
-- Threats or abusive language.
-- Encouraging wrongdoing.
+## Expected Behavior
+
+- Be professional, courteous, and respectful.
+- Assume good intent and give constructive feedback.
+- Use welcoming language and accept diverse viewpoints.
+- Help create a safe community for collaboration.
+
+## Unacceptable Behavior
+
+The following are not acceptable in any project space:
+
+- Harassment, hateful or discriminatory comments, or abusive language.
+- Threats, intimidation, or violence.
+- Personal attacks, stalking, or doxxing.
+- Derogatory jokes or slurs.
+- Public or private shaming.
+
+## Enforcement
+
+If you experience or witness unacceptable behavior, please report it to the maintainers. Reports should include as much detail as possible so the team can respond quickly.
 
 ## Reporting
-Report issues to the repository maintainers.
+
+To report a concern:
+
+- Open a GitHub issue in this repository, or
+- Contact repository maintainers directly.
+
+All reports will be reviewed and addressed promptly.
 

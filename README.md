@@ -1,34 +1,75 @@
-# Solomon CV Portfolio & 2-Month Skill Projects (10 repos)
+# Solomon CV Portfolio
 
+A modern personal portfolio website built with **React** and **Vite** for showcasing professional skills, projects, experience, testimonials, and contact details.
 
-This workspace contains planning files for building **10 individual, skill-focused technical projects** (10 separate GitHub repositories), scheduled over **2 months**.
+## About
 
-## Projects
-1. Enterprise ERP System (`erp-system`)
-2. AI Resume & Interview Platform (`ai-resume-interview`)
-3. Real-Time Project Management Tool (`real-time-project-management`)
-4. LMS (`lms`)
-5. Logistics & Fleet Management (`logistics-fleet`)
-6. Multi-Tenant SaaS CRM (`multi-tenant-crm`)
-7. Crowdfunding (`crowdfunding`)
-8. Online Examination System (`online-exams`)
-9. Developer Collaboration (`dev-collab`)
-10. Smart City Dashboard (`smart-city-dashboard`)
+This repository contains the frontend code for Solomon Mwangi's personal CV portfolio website. The design focuses on clean visuals, interactive sections, and fast performance for a polished web presentation.
 
-## Stack (confirmed)
-- Frontend: React + Vite
-- Backend: Node.js + Express
-- DB: PostgreSQL
-- ORM: Prisma
-- Auth/RBAC: JWT + role-based permissions where applicable
+## Features
 
-## Files in this workspace
-- `PLAN_2_MONTHS.md` — week-by-week plan
-- `REPO_TEMPLATE.md` — per-project README template
-- `10_PROJECTS.md` — specs per project
-- `TODO.md` — execution checklist
-- `projects_manifest.md` — folder/repo mapping
+- Animated hero landing section
+- Skills summary and experience highlights
+- Project showcase section
+- Testimonials and contact form section
+- Smooth scrolling navigation
+- Responsive layout with modern UI interactions
 
-## Next step
-I will create local scaffolds for all 10 project folders using the stack above, so you can `git init`, create each GitHub repo, and push.
+## Tech Stack
+
+- React 18
+- Vite 5
+- JavaScript (ESM)
+- CSS modules/styles
+
+## Getting Started
+
+### Install dependencies
+
+```bash
+cd frontend
+npm install
+```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in the terminal to view the portfolio site in your browser.
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+- `frontend/src/App.jsx` — main app layout and navigation
+- `frontend/src/components/sections/` — page sections like Hero, About, Skills, Projects, Experience, Testimonials, Contact, CTA
+- `frontend/src/styles/` — global and component-level CSS styles
+- `frontend/index.html` — entry HTML template
+
+## Notes
+
+- The repo currently includes the frontend portfolio site.
+- The site is designed to present a polished personal brand, with placeholders for social links and downloadable CV content.
+
+## Community
+
+- Please follow `CODE_OF_CONDUCT.md` when contributing or opening issues.
+- See `CONTRIBUTING.md` for contribution instructions and development workflow.
+- Report security concerns through `SECURITY.md`.
+
+## License
+
+This project is available under the [MIT License](LICENSE).
 
