@@ -1,94 +1,29 @@
 /* ===== EXPERIENCE SECTION ===== */
-.exp-section {
-  padding: 76px 56px;
-  border-top: 1px solid rgba(212,175,55,.08);
-  position: relative;
+#experience{
+  padding:100px 64px;border-top:1px solid rgba(212,175,55,.08)
 }
+.exp-top{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-bottom:52px}
+.exp-subdesc{font-size:15px;color:rgba(255,255,255,.42);line-height:1.8;font-weight:300}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid rgba(212,175,55,.1);border-radius:18px;overflow:hidden}
+.ec{padding:30px 28px;background:#0a0a0a;position:relative;transition:background .25s}
+.ec:hover{background:rgba(212,175,55,.04)}
+/* right borders */
+.ec::after{content:'';position:absolute;top:0;right:0;width:1px;height:100%;background:rgba(212,175,55,.08)}
+.ec:nth-child(3n)::after{display:none}
+/* bottom borders */
+.ec::before{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(212,175,55,.08)}
+.ec:nth-child(4)::before,.ec:nth-child(5)::before,.ec:nth-child(6)::before{display:none}
+.ec-yr{font-family:'Playfair Display',serif;font-size:40px;font-weight:900;color:#d4af37;line-height:1;margin-bottom:8px}
+.ec-ttl{font-size:14.5px;font-weight:600;color:#fff;margin-bottom:8px}
+.ec-txt{font-size:12.5px;color:rgba(255,255,255,.38);line-height:1.68;font-weight:300}
+.ec-txt strong{color:rgba(255,255,255,.62);font-weight:500}
 
-.exp-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-  margin-bottom: 48px;
-}
+/* Reveal animation classes */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
 
-.exp-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: rgba(212,175,55,.08);
-  border: 1px solid rgba(212,175,55,.1);
-  border-radius: 14px;
-  overflow: hidden;
-}
-
-.exp-card {
-  background: #0c0c0c;
-  padding: 24px 22px;
-  transition: background .25s;
-  position: relative;
-}
-
-.exp-card:hover {
-  background: rgba(212,175,55,.04);
-}
-
-.exp-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 1px;
-  height: 100%;
-  background: rgba(212,175,55,.08);
-}
-
-.exp-card:nth-child(3)::after,
-.exp-card:nth-child(6)::after {
-  display: none;
-}
-
-.exp-border-b {
-  border-top: 1px solid rgba(212,175,55,.08);
-}
-
-.exp-year {
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  font-weight: 900;
-  color: #d4af37;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-
-.exp-ttl {
-  font-size: 14px;
-  font-weight: 500;
-  color: #f5f1e8;
-  margin-bottom: 6px;
-}
-
-.exp-desc {
-  font-size: 12px;
-  color: rgba(240,236,224,.4);
-  line-height: 1.6;
-  font-weight: 300;
-}
-
-.exp-desc strong {
-  color: rgba(240,236,224,.65);
-  font-weight: 500;
-}
-
-@media (max-width: 1024px) {
-  .exp-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .exp-section { padding: 60px 30px; }
-  .exp-header { grid-template-columns: 1fr; gap: 24px; }
-  .exp-cards { grid-template-columns: 1fr; }
-}
+/* Sec EW and Sec TTL classes */
+.sec-ew{font-size:10.5px;font-weight:600;color:#d4af37;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.sec-ew::before{content:'';display:block;width:22px;height:1px;background:#d4af37;flex-shrink:0}
+.sec-ttl{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,50px);font-weight:900;color:#fff;letter-spacing:-.025em;line-height:1.08}
+.sec-ttl em{color:#d4af37;font-style:italic}

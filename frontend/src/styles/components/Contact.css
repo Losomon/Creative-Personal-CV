@@ -1,146 +1,46 @@
-/* ===== CTA BAR ===== */
-.cta-bar {
-  margin: 0 56px 64px;
-  padding: 40px 48px;
-  background: rgba(212,175,55,.04);
-  border: 1px solid rgba(212,175,55,.18);
-  border-radius: 16px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 40px;
-  position: relative;
-  overflow: hidden;
+/* ===== CONTACT SECTION ===== */
+#contact{
+  padding:100px 64px;border-top:1px solid rgba(212,175,55,.08)
 }
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-left{padding-top:8px}
+.contact-left .sec-ttl{margin-top:14px;margin-bottom:18px}
+.contact-sub{font-size:15px;color:rgba(255,255,255,.42);line-height:1.78;font-weight:300;margin-bottom:36px}
+.contact-info-row{display:flex;flex-direction:column;gap:16px;margin-bottom:36px}
+.ci{display:flex;align-items:center;gap:14px}
+.ci-icon{width:44px;height:44px;border-radius:12px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-icon svg{width:20px;height:20px;stroke:#d4af37;stroke-width:1.8;fill:none}
+.ci-lbl{font-size:10.5px;color:rgba(255,255,255,.3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
+.ci-val{font-size:13.5px;color:rgba(255,255,255,.7);font-weight:400}
+.contact-socials{display:flex;gap:10px}
+.cs{width:42px;height:42px;border-radius:11px;border:1.5px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);transition:all .22s}
+.cs svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.9;fill:none}
+.cs:hover{border-color:#d4af37;color:#d4af37;transform:translateY(-2px)}
 
-.cta-bar::before {
-  content: '';
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(212,175,55,.07) 0%, transparent 65%);
-  right: -60px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
+/* Form */
+.contact-form{background:rgba(14,12,7,.9);border:1.5px solid rgba(212,175,55,.12);border-radius:20px;padding:38px 36px}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.cf-group{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.cf-group label{font-size:11.5px;font-weight:500;color:rgba(255,255,255,.45);letter-spacing:.04em}
+.cf-group input,.cf-group textarea,.cf-group select{
+  background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.1);
+  border-radius:10px;padding:12px 16px;font-size:14px;font-family:'DM Sans',sans-serif;
+  color:#fff;outline:none;transition:border-color .22s;resize:none;width:100%;
 }
+.cf-group input::placeholder,.cf-group textarea::placeholder{color:rgba(255,255,255,.25)}
+.cf-group input:focus,.cf-group textarea:focus{border-color:rgba(212,175,55,.45);background:rgba(212,175,55,.03)}
+.cf-group textarea{height:120px}
+.cf-submit{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:#d4af37;color:#0a0a0a;font-size:14px;font-weight:600;padding:14px;border-radius:10px;border:none;cursor:pointer;transition:all .25s;font-family:'DM Sans',sans-serif;letter-spacing:.02em;margin-top:6px}
+.cf-submit:hover{background:#c9a530;transform:translateY(-2px);box-shadow:0 10px 28px rgba(212,175,55,.3)}
+.cf-submit svg{width:16px;height:16px;stroke:currentColor;stroke-width:2.5;fill:none}
 
-.cta-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  font-weight: 900;
-  color: #f5f1e8;
-  letter-spacing: -.02em;
-  line-height: 1.1;
-  margin-bottom: 6px;
-}
+/* Reveal animation classes */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}
 
-.cta-heading em {
-  color: #d4af37;
-}
-
-.cta-sub {
-  font-size: 14px;
-  color: rgba(240,236,224,.42);
-  font-weight: 300;
-}
-
-.cta-links {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.cta-link {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 12.5px;
-  color: rgba(240,236,224,.55);
-  border: 1px solid rgba(240,236,224,.13);
-  border-radius: 8px;
-  padding: 9px 16px;
-  transition: all .22s;
-  white-space: nowrap;
-  text-decoration: none;
-}
-
-.cta-link:hover {
-  border-color: rgba(212,175,55,.4);
-  color: #d4af37;
-}
-
-.cta-link i {
-  font-size: 15px;
-}
-
-.cta-link-primary {
-  background: #d4af37;
-  color: #0a0a0a;
-  border-color: #d4af37;
-  font-weight: 500;
-}
-
-.cta-link-primary:hover {
-  background: #c9a530;
-  color: #0a0a0a;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  border-top: 1px solid rgba(212,175,55,.1);
-  padding: 22px 56px;
-}
-
-.foot-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.foot-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #d4af37;
-}
-
-.foot-copy {
-  font-size: 12.5px;
-  color: rgba(240,236,224,.28);
-  font-weight: 300;
-}
-
-.foot-socs {
-  display: flex;
-  gap: 10px;
-}
-
-.fsoc {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid rgba(240,236,224,.13);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(240,236,224,.35);
-  font-size: 15px;
-  transition: all .22s;
-  text-decoration: none;
-}
-
-.fsoc:hover {
-  border-color: #d4af37;
-  color: #d4af37;
-}
-
-@media (max-width: 768px) {
-  .cta-bar { margin: 0 30px 40px; padding: 30px 24px; grid-template-columns: 1fr; }
-  footer { padding: 20px 30px; }
-  .foot-inner { flex-direction: column; text-align: center; gap: 12px; }
-  .cta-links { justify-content: center; }
-}
+/* Sec EW and Sec TTL classes */
+.sec-ew{font-size:10.5px;font-weight:600;color:#d4af37;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.sec-ew::before{content:'';display:block;width:22px;height:1px;background:#d4af37;flex-shrink:0}
+.sec-ttl{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,50px);font-weight:900;color:#fff;letter-spacing:-.025em;line-height:1.08}
+.sec-ttl em{color:#d4af37;font-style:italic}
