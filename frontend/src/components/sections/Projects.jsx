@@ -1,210 +1,199 @@
-import { useMemo, useState } from 'react'
-import '../../styles/components/Projects.css'
-
-
-const TABS = [
-  { key: 'all', label: 'Featured', icon: 'ti ti-layout-grid' },
-  { key: 'dashboard', label: 'Dashboard', icon: 'ti ti-chart-bar' },
-  { key: 'database', label: 'Database', icon: 'ti ti-database' },
-  { key: 'uiux', label: 'UI/UX Design', icon: 'ti ti-palette' },
-  { key: 'tools', label: 'Tools & Others', icon: 'ti ti-tools' },
-]
-
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState('all')
-
-  const projects = useMemo(
-    () => ({
-      all: [
-        {
-          name: 'Travels Admin\nDashboard',
-          type: 'Featured',
-          kind: 'featured',
-          desc:
-            'A comprehensive travel management dashboard built for airlines and travel agencies — real-time booking analytics, route management and revenue tracking in one elegant interface.',
-        },
-        {
-          name: 'Game Guru',
-          desc:
-            'A game discovery platform with reviews, ratings and recommendations powered by the RAWG API.',
-          cat: 'Web App',
-          cls: 'pcard-img-1',
-          tech: ['React', 'RAWG API', 'TypeScript'],
-        },
-        {
-          name: 'Travels Catcher',
-          desc:
-            'Travel development software for seamless itinerary planning and destination discovery.',
-          cat: 'Mobile',
-          cls: 'pcard-img-2',
-          tech: ['React Native', 'Firebase'],
-        },
-        {
-          name: 'Lessons Learner',
-          desc:
-            'Online learning platform for learners who want to learn from experts.',
-          cat: 'EdTech',
-          cls: 'pcard-img-3',
-          tech: ['Next.js', 'Prisma', 'Stripe'],
-        },
-      ],
-      dashboard: [
-        {
-          name: 'Travels Admin\nDashboard',
-          type: 'Dashboard',
-          kind: 'featured',
-          desc:
-            'A comprehensive travel management dashboard built for airlines and travel agencies — real-time booking analytics, route management and revenue tracking in one elegant interface.',
-        },
-      ],
-      database: [
-        {
-          name: 'Lessons Learner',
-          desc:
-            'Online learning platform for learners who want to learn from experts.',
-          cat: 'EdTech',
-          cls: 'pcard-img-3',
-          tech: ['Next.js', 'Prisma', 'Stripe'],
-        },
-      ],
-      uiux: [
-        {
-          name: 'Game Guru',
-          desc:
-            'A game discovery platform with reviews, ratings and recommendations powered by the RAWG API.',
-          cat: 'Web App',
-          cls: 'pcard-img-1',
-          tech: ['React', 'RAWG API', 'TypeScript'],
-        },
-      ],
-      tools: [
-        {
-          name: 'Travels Catcher',
-          desc:
-            'Travel development software for seamless itinerary planning and destination discovery.',
-          cat: 'Mobile',
-          cls: 'pcard-img-2',
-          tech: ['React Native', 'Firebase'],
-        },
-      ],
-    }),
-    []
-  )
-
-  const content = projects[activeTab] ?? projects.all
+  const TABS = [
+    { key: 'featured', label: 'Featured', icon: '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>' },
+    { key: 'dashboard', label: 'Dashboard', icon: '<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>' },
+    { key: 'database', label: 'Database', icon: '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>' },
+    { key: 'uiux', label: 'UI/UX Design', icon: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/>' },
+    { key: 'tools', label: 'Tools & Others', icon: '<path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>' }
+  ];
 
   return (
-    <section className="projects-section" id="projects">
-
-      <div className="proj-header">
+    <section id="projects" className="reveal">
+      <div className="sec-header">
         <div>
-          <div className="eyebrow">Portfolio</div>
-          <h2 className="section-title">Projects that<br /><em>continue to evolve</em></h2>
+          <div className="sec-ew">Portfolio</div>
+          <h2 className="sec-ttl" style={{ marginTop: 10 }}>
+            Projects that<br /><em>continue to evolve</em>
+          </h2>
         </div>
-        <a href="#" className="view-all">View All Projects <i className="ti ti-arrow-right" /></a>
+        <a href="#" className="btn-outline">
+          View All
+          <svg viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
       </div>
 
-      <div className="proj-tabs">
-        {TABS.map((t) => (
+      <div className="ptabs">
+        {TABS.map((tab, index) => (
           <button
-            key={t.key}
-            className={`ptab ${activeTab === t.key ? 'active' : ''}`}
-            onClick={() => setActiveTab(t.key)}
-            type="button"
+            key={tab.key}
+            className={`ptab${index === 0 ? ' on' : ''}`}
+            dangerouslySetInnerHTML={{ __html: tab.icon }}
           >
-            <i className={t.icon} /> {t.label}
+            {tab.label}
           </button>
         ))}
       </div>
 
-      {activeTab === 'all' && (
-        <div className="featured-card">
-          <div className="feat-img">
-            <div className="feat-screen">
-              <div className="feat-screen-bar">
-                <div className="feat-screen-dot" style={{ background: '#e74c3c' }} />
-                <div className="feat-screen-dot" style={{ background: '#f39c12' }} />
-                <div className="feat-screen-dot" style={{ background: '#2ecc71' }} />
+      <div className="feat reveal">
+        <div className="feat-vis">
+          <div className="mock">
+            <div className="mock-bar">
+              <div className="mdot" style={{ background: '#e74c3c' }} />
+              <div className="mdot" style={{ background: '#f39c12' }} />
+              <div className="mdot" style={{ background: '#2ecc71' }} />
+            </div>
+            <div className="mock-body">
+              <div className="mrow w7" />
+              <div className="mrow w4" />
+              <div className="mchart">
+                <div className="mbar" style={{ height: '30%' }} />
+                <div className="mbar" style={{ height: '55%' }} />
+                <div className="mbar" style={{ height: '42%' }} />
+                <div className="mbar hi" style={{ height: '88%' }} />
+                <div className="mbar" style={{ height: '60%' }} />
+                <div className="mbar" style={{ height: '72%' }} />
+                <div className="mbar" style={{ height: '45%' }} />
+                <div className="mbar hi" style={{ height: '92%' }} />
               </div>
-              <div className="feat-screen-content">
-                <div className="feat-row wide" />
-                <div className="feat-row med" />
-                <div className="feat-chart">
-                  {[30, 60, 45, 80, 55, 70, 40].map((h, i) => (
-                    <div
-                      key={i}
-                      className="feat-bar"
-                      style={{
-                        height: `${h}%`,
-                        background: i === 3 ? 'rgba(212,175,55,.55)' : 'rgba(212,175,55,.25)',
-                      }}
-                    />
-                  ))}
-                </div>
-                <div className="feat-row short" />
-              </div>
-            </div>
-          </div>
-          <div className="feat-info">
-            <div className="feat-badge">
-              <i className="ti ti-star-filled" style={{ fontSize: 11 }} /> Featured Project
-            </div>
-            <h3 className="feat-title">Travels Admin<br />Dashboard</h3>
-            <p className="feat-desc">
-              A comprehensive travel management dashboard built for airlines and travel agencies — real-time
-              booking analytics, route management and revenue tracking in one elegant interface.
-            </p>
-            <div className="feat-tags">
-              <span className="tag">React</span>
-              <span className="tag">Node.js</span>
-              <span className="tag">MongoDB</span>
-              <span className="tag">Tailwind CSS</span>
-              <span className="tag">Chart.js</span>
-            </div>
-            <div className="feat-links">
-              <a href="#" className="feat-link feat-link-primary">
-                <i className="ti ti-external-link" /> Live Demo
-              </a>
-              <a href="#" className="feat-link feat-link-ghost">
-                <i className="ti ti-brand-github" /> Source
-              </a>
+              <div className="mrow w3" />
             </div>
           </div>
         </div>
-      )}
-
-      <div className="proj-cards-label">More Projects</div>
-      <div className="proj-grid">
-        {content
-          .filter((p) => p.kind !== 'featured')
-          .map((p, i) => (
-            <div key={i} className="proj-card">
-              <div className={`pcard-img ${p.cls}`}>
-                <div className="pcard-overlay">
-                  <a href="#" className="pcard-link" aria-label="External link">
-                    <i className="ti ti-external-link" />
-                  </a>
-                  <a href="#" className="pcard-link" aria-label="GitHub">
-                    <i className="ti ti-brand-github" />
-                  </a>
-                </div>
-                <span className="pcat">{p.cat}</span>
-              </div>
-              <div className="pcard-body">
-                <h3>{p.name}</h3>
-                <p>{p.desc}</p>
-                <div className="pcard-tags">
-                  {p.tech?.map((t, j) => (
-                    <span key={j} className="tag">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="feat-info">
+          <div className="feat-pill">
+            <svg viewBox="0 0 24 24">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <h3 className="feat-ttl">Travels Admin<br />Dashboard</h3>
+          <p className="feat-desc">
+            A comprehensive travel management dashboard for airlines and agencies — real-time booking analytics, route management and revenue tracking in one elegant interface.
+          </p>
+          <div className="feat-tags">
+            <span className="ftag">React</span>
+            <span className="ftag">Node.js</span>
+            <span className="ftag">MongoDB</span>
+            <span className="ftag">Tailwind</span>
+            <span className="ftag">Chart.js</span>
+          </div>
+          <div className="feat-links">
+            <a href="#" className="fl-p">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Live Demo
+            </a>
+            <a href="#" className="fl-g">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+              </svg>
+              Source Code
+            </a>
+          </div>
+        </div>
       </div>
 
+      <div className="pcards-lbl">More Projects</div>
+      <div className="pcards-grid">
+        <div className="pc reveal">
+          <div className="pc-img pci-1">
+            <div className="pc-ov">
+              <a href="#" className="pc-lnk">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+              <a href="#" className="pc-lnk">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                </svg>
+              </a>
+            </div>
+            <span className="pc-cat">Web App</span>
+          </div>
+          <div className="pc-body">
+            <h3>Game Guru</h3>
+            <p>Game discovery platform with personalised reviews and recommendations via the RAWG API.</p>
+            <div className="pc-tags">
+              <span className="pctag">React</span>
+              <span className="pctag">RAWG API</span>
+              <span className="pctag">TypeScript</span>
+            </div>
+          </div>
+        </div>
+        <div className="pc reveal d1">
+          <div className="pc-img pci-2">
+            <div className="pc-ov">
+              <a href="#" className="pc-lnk">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+              <a href="#" className="pc-lnk">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                </svg>
+              </a>
+            </div>
+            <span className="pc-cat">Mobile</span>
+          </div>
+          <div className="pc-body">
+            <h3>Travels Catcher</h3>
+            <p>Travel development software for seamless itinerary planning and destination discovery.</p>
+            <div className="pc-tags">
+              <span className="pctag">React Native</span>
+              <span className="pctag">Firebase</span>
+              <span className="pctag">Maps API</span>
+            </div>
+          </div>
+        </div>
+        <div className="pc reveal d2">
+          <div className="pc-img pci-3">
+            <div className="pc-ov">
+              <a href="#" className="pc-lnk">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+              <a href="#" className="pc-lnk">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                </svg>
+              </a>
+            </div>
+            <span className="pc-cat">EdTech</span>
+          </div>
+          <div className="pc-body">
+            <h3>Lessons Learner</h3>
+            <p>Online learning platform connecting students with expert instructors in real time.</p>
+            <div className="pc-tags">
+              <span className="pctag">Next.js</span>
+              <span className="pctag">Prisma</span>
+              <span className="pctag">Stripe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="proj-cta">
+        <a href="#" className="btn-outline">
+          View All Projects
+          <svg viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
     </section>
-  )
+  );
 }

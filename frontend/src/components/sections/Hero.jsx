@@ -29,115 +29,84 @@ export default function Hero() {
 
   return (
     <section className="hero" ref={heroRef}>
-      <div className="hero-glow" ref={glowRef} />
-      <div className="bg-grid" />
-      <div className="bg-glow-1" />
-      <div className="bg-glow-2" />
-
-      <div className="hero-layout">
-        {/* LEFT: Text */}
-        <div className="hero-text">
-          <p className="hero-greeting">Hi, I'm</p>
-          <h1>
-            Solomon<br />
-            Mwangi
-          </h1>
-          <p className="hero-role">Full-Stack Developer &amp; UI Enthusiast</p>
-          <p className="hero-desc">
-            I design and build premium digital experiences that are fast,
-            scalable and unforgettable.
-          </p>
-          <div className="hero-btns">
-            <button className="btn-primary">
-              View My Work <i className="ti ti-arrow-right" />
-            </button>
-            <button className="btn-secondary">
-              <i className="ti ti-send" /> Hire Me
-            </button>
-          </div>
-          <div className="social-links">
-            <a href="#" className="soc" aria-label="GitHub">
-              <i className="ti ti-brand-github" />
-            </a>
-            <a href="#" className="soc" aria-label="LinkedIn">
-              <i className="ti ti-brand-linkedin" />
-            </a>
-            <a href="#" className="soc" aria-label="Twitter">
-              <i className="ti ti-brand-twitter" />
-            </a>
-            <a href="#" className="soc" aria-label="Email">
-              <i className="ti ti-mail" />
-            </a>
-          </div>
+      {/* Left Section */}
+      <div className="h-left">
+        <div className="h-eyebrow">
+          <span className="h-eyebrow-line"></span>
+          <span>Full-Stack Developer &amp; UI Enthusiast</span>
         </div>
-
-        {/* CENTER: Photo */}
-        <div className="hero-photo">
-          <div className="photo-container">
-            <div className="photo-ring" />
-            <svg className="circuit-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="150" cy="150" r="130" stroke="rgba(212,175,55,0.08)" strokeWidth="1" />
-              <circle cx="150" cy="150" r="110" stroke="rgba(212,175,55,0.06)" strokeWidth="1" />
-              <path d="M150 20 L150 40 M150 70 L150 80 M20 150 L40 150 M70 150 L80 150 M220 150 L230 150 M260 150 L280 150 M150 220 L150 230 M150 260 L150 280" stroke="rgba(212,175,55,0.12)" strokeWidth="1" />
-              <circle cx="150" cy="20" r="3" fill="rgba(212,175,55,0.3)" />
-              <circle cx="150" cy="70" r="3" fill="rgba(212,175,55,0.2)" />
-              <circle cx="20" cy="150" r="3" fill="rgba(212,175,55,0.3)" />
-              <circle cx="70" cy="150" r="3" fill="rgba(212,175,55,0.2)" />
-              <circle cx="230" cy="150" r="3" fill="rgba(212,175,55,0.2)" />
-              <circle cx="280" cy="150" r="3" fill="rgba(212,175,55,0.3)" />
-              <circle cx="150" cy="220" r="3" fill="rgba(212,175,55,0.2)" />
-              <circle cx="150" cy="260" r="3" fill="rgba(212,175,55,0.3)" />
-              <path d="M40 150 L40 80 Q40 60 60 60 L100 60" stroke="rgba(212,175,55,0.1)" strokeWidth="1" />
-              <circle cx="100" cy="60" r="3" fill="rgba(212,175,55,0.25)" />
-              <path d="M260 150 L260 200 Q260 220 240 220 L200 220" stroke="rgba(212,175,55,0.1)" strokeWidth="1" />
-              <circle cx="200" cy="220" r="3" fill="rgba(212,175,55,0.25)" />
-              <path d="M150 40 Q180 40 180 70 L180 100" stroke="rgba(212,175,55,0.08)" strokeWidth="1" />
-              <circle cx="180" cy="100" r="2.5" fill="rgba(212,175,55,0.2)" />
-            </svg>
-            <div className="photo-circle">
-              <img
-                className="profile-image"
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&q=80"
-                alt="Professional headshot of Solomon Mwangi"
-              />
-            </div>
-            <div className="freelance-badge">
-              <div className="pdot" /> Available for Freelance
-            </div>
-          </div>
+        <h1 className="h-title">
+          Designing digital<br />products that<br />
+          <em>create impact.</em>
+        </h1>
+        <p className="h-desc">
+          I combine modern technologies, clean architecture, and thoughtful design to build premium web experiences that users love.
+        </p>
+        <div className="h-btns">
+          <button className="btn-gold" onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}>
+            View My Work
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <button className="btn-ghost" onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}>
+            <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Hire Me
+          </button>
         </div>
-
-        {/* RIGHT: Stats */}
-        <div className="hero-stats">
-          <div className="stat-card">
-            <div className="stat-ico"><i className="ti ti-rocket" /></div>
-            <div>
-              <div className="stat-num">20+</div>
-              <div className="stat-lbl">Projects Completed</div>
-            </div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-ico"><i className="ti ti-code" /></div>
-            <div>
-              <div className="stat-num">3+</div>
-              <div className="stat-lbl">Years Experience</div>
-            </div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-ico"><i className="ti ti-star" /></div>
-            <div>
-              <div className="stat-num">95%</div>
-              <div className="stat-lbl">Client Satisfaction</div>
-            </div>
-          </div>
+        <div className="h-socials">
+          <a href="#" className="h-soc" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          </a>
+          <a href="#" className="h-soc" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" className="h-soc" aria-label="Twitter">
+            <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          </a>
+          <a href="#" className="h-soc" aria-label="Email">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
         </div>
       </div>
 
-      <div className="hero-scroll">
-        <span className="scroll-text">SCROLL TO EXPLORE</span>
-        <span className="scroll-mouse">
-          <span className="scroll-wheel" />
-        </span>
+      {/* Center Section */}
+      <div className="h-center">
+        <div className="h-glow"></div>
+        <div className="h-ring-outer"></div>
+        <div className="h-ring"></div>
+        <div className="cir cir-1"></div>
+        <div className="cir cir-2"></div>
+        <div className="cir cir-3"></div>
+        <div className="cir cir-4"></div>
+        <div className="cir cir-5"></div>
+        <div className="cir cir-6"></div>
+        <div className="cir cir-7"></div>
+        <div className="h-photo">
+          {/* TO USE YOUR REAL PHOTO:
+            Replace the .h-mono div below with:
+            <img className="h-photo-img" src="your-photo.jpg" alt="Solomon Mwangi">
+          */}
+          <div className="h-mono">SM</div>
+        </div>
+        <div className="h-avail">
+          <span className="h-avail-dot"></span>
+          Available for Freelance
+        </div>
+      </div>
+
+      {/* Right Section */}
+      <div className="h-right">
+        <div className="h-stat">
+          <div className="h-stat-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <div><div className="h-stat-num">20+</div><div className="h-stat-lbl">Projects Completed</div></div>
+        </div>
+        <div className="h-stat">
+          <div className="h-stat-ico"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <div><div className="h-stat-num">3+</div><div className="h-stat-lbl">Years Experience</div></div>
+        </div>
+        <div className="h-stat">
+          <div className="h-stat-ico"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div><div className="h-stat-num">95%</div><div className="h-stat-lbl">Client Satisfaction</div></div>
+        </div>
       </div>
     </section>
   )
