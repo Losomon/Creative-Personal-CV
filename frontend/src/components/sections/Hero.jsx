@@ -37,14 +37,15 @@ export default function Hero() {
       <div className="hero-layout">
         {/* LEFT: Text */}
         <div className="hero-text">
-          <p className="hero-eyebrow">FULL-STACK DEVELOPER & UI ENTHUSIAST</p>
-          <h1 className="hero-headline">
-            Designing digital products that
-            <span>create impact.</span>
+          <p className="hero-greeting">Hi, I'm</p>
+          <h1>
+            Solomon<br />
+            Mwangi
           </h1>
+          <p className="hero-role">Full-Stack Developer &amp; UI Enthusiast</p>
           <p className="hero-desc">
-            I combine modern technologies, clean architecture, and thoughtful
-            design to build premium web experiences that users love.
+            I design and build premium digital experiences that are fast,
+            scalable and unforgettable.
           </p>
           <div className="hero-btns">
             <button className="btn-primary">
