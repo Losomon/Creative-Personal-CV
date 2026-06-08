@@ -27,11 +27,8 @@ export default function Projects() {
 
       <div className="ptabs">
         {TABS.map((tab, index) => (
-          <button
-            key={tab.key}
-            className={`ptab${index === 0 ? ' on' : ''}`}
-            dangerouslySetInnerHTML={{ __html: tab.icon }}
-          >
+          <button key={tab.key} className={`ptab${index === 0 ? ' on' : ''}`}>
+            <span dangerouslySetInnerHTML={{ __html: tab.icon }} />
             {tab.label}
           </button>
         ))}
