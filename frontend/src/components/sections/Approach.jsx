@@ -1,3 +1,5 @@
+import '../../styles/components/Approach.css'
+
 export default function Approach() {
   const approachData = [
     {
@@ -27,15 +29,15 @@ export default function Approach() {
   ]
 
   return (
-    <section className="approach" id="approach" style={{background: '#0a0a0a', padding: '80px 64px 0'}}>
+    <section id="approach">
       <div className="approach-ew">My Approach</div>
       <div className="approach-grid">
         {approachData.map((item, index) => (
           <div key={index} className={`ap-card reveal ${index > 0 ? `d${index}` : ''}`}>
             <span className="ap-num">{item.number}</span>
             <div className="ap-icon" dangerouslySetInnerHTML={{__html: item.icon}} />
-            <h3 className="ap-title">{item.title}</h3>
-            <p className="ap-desc">{item.description}</p>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
           </div>
         ))}
       </div>
