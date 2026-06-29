@@ -122,10 +122,6 @@ export default function App() {
 
   return (
     <div className="app">
-      <div className="bg-grid" />
-      <div className="noise-overlay" />
-
-
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-inner">
           <a href="#" className="logo">&lt;SM/&gt;</a>

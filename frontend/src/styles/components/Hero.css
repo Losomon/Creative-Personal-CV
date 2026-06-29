@@ -9,15 +9,6 @@
   background: #0a0a0a;
 }
 
-/* Subtle grid texture */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(rgba(212,175,55,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.025) 1px,transparent 1px);
-  background-size:72px 72px;pointer-events:none;z-index:0;
-}
-
 /* LEFT */
 .h-left{
   display:flex;flex-direction:column;justify-content:center;

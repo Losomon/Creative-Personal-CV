@@ -174,7 +174,7 @@ img {
 
 /* ===== SECTION STYLES ===== */
 section {
-  padding: 140px 0;
+  padding: 0;
   position: relative;
 }
 
@@ -194,6 +194,11 @@ section {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 30px;
+}
+
+.section-title em {
+  color: var(--accent);
+  font-style: italic;
 }
 
 /* ===== GLASS CARD ===== */
@@ -243,26 +248,4 @@ section {
 .btn-outline:hover {
   border-color: var(--accent);
   color: var(--accent);
-}
-
-/* ===== BACKGROUND GRID ===== */
-.bg-grid {
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-  background-size: 80px 80px;
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* ===== NOISE OVERLAY ===== */
-.noise-overlay {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
