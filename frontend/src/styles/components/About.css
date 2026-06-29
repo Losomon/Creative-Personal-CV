@@ -2,7 +2,10 @@
 #about{
   padding:100px 64px;
   border-top:1px solid rgba(212,175,55,.1);
-  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
 }
 .sec-ew{font-size:10.5px;font-weight:600;color:#d4af37;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .sec-ew::before{content:'';display:block;width:22px;height:1px;background:#d4af37;flex-shrink:0}
