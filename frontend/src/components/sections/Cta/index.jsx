@@ -1,3 +1,5 @@
+import './index.css'
+
 export default function Cta() {
   return (
     <div className="cta-bar reveal">

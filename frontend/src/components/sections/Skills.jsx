@@ -140,6 +140,12 @@ export default function Skills() {
           <p>
             CI/CD pipelines, Docker containerisation, and cloud deployments on AWS and Vercel.
           </p>
+          <div className="sk-tags">
+            <span className="sk-tag">AWS</span>
+            <span className="sk-tag">Docker</span>
+            <span className="sk-tag">CI/CD</span>
+            <span className="sk-tag">Vercel</span>
+          </div>
           <div className="sk-bar-wrap">
             <div className="sk-bar">
               <div className="sk-bar-fill" data-w="74" />

@@ -1,5 +1,12 @@
 import { useState, useEffect } from 'react'
 import './styles/App.css'
+import './styles/components/Skills.css'
+import './styles/components/Projects.css'
+import './styles/components/Experience.css'
+import './styles/components/Testimonials.css'
+import './styles/components/Contact.css'
+import './styles/components/Approach.css'
+import './styles/components/Hero.css'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Skills from './components/sections/Skills'
@@ -140,8 +147,8 @@ export default function App() {
 
       <main>
         <Hero />
-        <About />
         <Approach />
+        <About />
         <Skills />
         <Projects />
         <Experience />
