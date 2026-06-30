@@ -3,9 +3,10 @@
 - [x] Decide backend scope (contact form / data API / full scaffold)
 - [x] Create backend scaffold: backend/
 - [x] Add Express server with /health endpoint
-- [ ] Add Prisma schema + PostgreSQL connection (if full scaffold)
+- [x] Add Prisma schema + PostgreSQL connection (if full scaffold) - Skipped (not needed for contact form scope)
 - [x] Add env config (.env.example)
-- [ ] Add npm scripts (dev/start/build)
+- [x] Add npm scripts (dev/start/build)
 - [x] Run backend locally and verify /health
+- [x] Add POST /contact endpoint for form submissions
 
 
