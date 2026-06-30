@@ -1,0 +1,8 @@
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+}
