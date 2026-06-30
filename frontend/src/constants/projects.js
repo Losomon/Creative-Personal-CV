@@ -31,6 +31,7 @@ export const FEATURED_PROJECT = {
   description:
     'A comprehensive travel management dashboard for airlines and agencies — real-time booking analytics, route management and revenue tracking in one elegant interface.',
   tags: ['React', 'Node.js', 'MongoDB', 'Tailwind', 'Chart.js'],
+  image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
   liveUrl: '#',
   sourceUrl: '#',
 }
@@ -42,6 +43,7 @@ export const MORE_PROJECTS = [
     description: 'Game discovery platform with personalised reviews and recommendations via the RAWG API.',
     category: 'Web App',
     tags: ['React', 'RAWG API', 'TypeScript'],
+    image: 'https://images.unsplash.com/photo-1511512578008-181771b4e5c3?auto=format&fit=crop&w=600&q=80',
     liveUrl: '#',
     sourceUrl: '#',
   },
@@ -51,6 +53,7 @@ export const MORE_PROJECTS = [
     description: 'Travel development software for seamless itinerary planning and destination discovery.',
     category: 'Mobile',
     tags: ['React Native', 'Firebase', 'Maps API'],
+    image: 'https://images.unsplash.com/photo-1488085061387-422e2e54f072?auto=format&fit=crop&w=600&q=80',
     liveUrl: '#',
     sourceUrl: '#',
   },
@@ -60,6 +63,7 @@ export const MORE_PROJECTS = [
     description: 'Online learning platform connecting students with expert instructors in real time.',
     category: 'EdTech',
     tags: ['Next.js', 'Prisma', 'Stripe'],
+    image: 'https://images.unsplash.com/photo-1516321318423-f17781735814?auto=format&fit=crop&w=600&q=80',
     liveUrl: '#',
     sourceUrl: '#',
   },

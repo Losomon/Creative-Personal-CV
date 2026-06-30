@@ -1,4 +1,5 @@
 import '../../styles/components/Projects.css'
+import { FEATURED_PROJECT, MORE_PROJECTS } from '../../constants/projects.js'
 export default function Projects() {
   const TABS = [
     { key: 'featured', label: 'Featured', paths: '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>' },
@@ -39,6 +40,7 @@ export default function Projects() {
 
       <div className="feat reveal">
         <div className="feat-vis">
+          <img src={FEATURED_PROJECT.image} alt={FEATURED_PROJECT.title} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.85 }} />
           <div className="mock">
             <div className="mock-bar">
               <div className="mdot" style={{ background: '#e74c3c' }} />
@@ -68,19 +70,15 @@ export default function Projects() {
               <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
             </svg>
           </div>
-          <h3 className="feat-ttl">Travels Admin<br />Dashboard</h3>
-          <p className="feat-desc">
-            A comprehensive travel management dashboard for airlines and agencies — real-time booking analytics, route management and revenue tracking in one elegant interface.
-          </p>
+          <h3 className="feat-ttl">{FEATURED_PROJECT.title.split(' ').map((word, i) => i === 1 ? <><br />{word}</> : word)}</h3>
+          <p className="feat-desc">{FEATURED_PROJECT.description}</p>
           <div className="feat-tags">
-            <span className="ftag">React</span>
-            <span className="ftag">Node.js</span>
-            <span className="ftag">MongoDB</span>
-            <span className="ftag">Tailwind</span>
-            <span className="ftag">Chart.js</span>
+            {FEATURED_PROJECT.tags.map(tag => (
+              <span key={tag} className="ftag">{tag}</span>
+            ))}
           </div>
           <div className="feat-links">
-            <a href="#" className="fl-p">
+            <a href={FEATURED_PROJECT.liveUrl} className="fl-p">
               <svg viewBox="0 0 24 24">
                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
                 <polyline points="15 3 21 3 21 9" />
@@ -88,7 +86,7 @@ export default function Projects() {
               </svg>
               Live Demo
             </a>
-            <a href="#" className="fl-g">
+            <a href={FEATURED_PROJECT.sourceUrl} className="fl-g">
               <svg viewBox="0 0 24 24">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
               </svg>
@@ -100,90 +98,36 @@ export default function Projects() {
 
       <div className="pcards-lbl">More Projects</div>
       <div className="pcards-grid">
-        <div className="pc reveal">
-          <div className="pc-img pci-1">
-            <div className="pc-ov">
-              <a href="#" className="pc-lnk">
-                <svg viewBox="0 0 24 24">
-                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-              <a href="#" className="pc-lnk">
-                <svg viewBox="0 0 24 24">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
-                </svg>
-              </a>
+        {MORE_PROJECTS.map((project, index) => (
+          <div key={project.id} className={`pc reveal${index > 0 ? ` d${index}` : ''}`}>
+            <div className="pc-img" style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              <div className="pc-ov">
+                <a href={project.liveUrl} className="pc-lnk">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a href={project.sourceUrl} className="pc-lnk">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                  </svg>
+                </a>
+              </div>
+              <span className="pc-cat">{project.category}</span>
             </div>
-            <span className="pc-cat">Web App</span>
-          </div>
-          <div className="pc-body">
-            <h3>Game Guru</h3>
-            <p>Game discovery platform with personalised reviews and recommendations via the RAWG API.</p>
-            <div className="pc-tags">
-              <span className="pctag">React</span>
-              <span className="pctag">RAWG API</span>
-              <span className="pctag">TypeScript</span>
-            </div>
-          </div>
-        </div>
-        <div className="pc reveal d1">
-          <div className="pc-img pci-2">
-            <div className="pc-ov">
-              <a href="#" className="pc-lnk">
-                <svg viewBox="0 0 24 24">
-                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-              <a href="#" className="pc-lnk">
-                <svg viewBox="0 0 24 24">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
-                </svg>
-              </a>
-            </div>
-            <span className="pc-cat">Mobile</span>
-          </div>
-          <div className="pc-body">
-            <h3>Travels Catcher</h3>
-            <p>Travel development software for seamless itinerary planning and destination discovery.</p>
-            <div className="pc-tags">
-              <span className="pctag">React Native</span>
-              <span className="pctag">Firebase</span>
-              <span className="pctag">Maps API</span>
+            <div className="pc-body">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div className="pc-tags">
+                {project.tags.map(tag => (
+                  <span key={tag} className="pctag">{tag}</span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="pc reveal d2">
-          <div className="pc-img pci-3">
-            <div className="pc-ov">
-              <a href="#" className="pc-lnk">
-                <svg viewBox="0 0 24 24">
-                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-              <a href="#" className="pc-lnk">
-                <svg viewBox="0 0 24 24">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
-                </svg>
-              </a>
-            </div>
-            <span className="pc-cat">EdTech</span>
-          </div>
-          <div className="pc-body">
-            <h3>Lessons Learner</h3>
-            <p>Online learning platform connecting students with expert instructors in real time.</p>
-            <div className="pc-tags">
-              <span className="pctag">Next.js</span>
-              <span className="pctag">Prisma</span>
-              <span className="pctag">Stripe</span>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
       <div className="proj-cta">
         <a href="#" className="btn-outline">
