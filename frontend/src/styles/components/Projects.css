@@ -46,11 +46,8 @@
 .pcards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .pc{background:rgba(12,10,6,.95);border:1.5px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;transition:all .27s}
 .pc:hover{border-color:rgba(212,175,55,.3);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.6)}
-.pc-img{height:170px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.pci-1{background:linear-gradient(135deg,#1a0900,#2e1806,#160900)}
-.pci-2{background:linear-gradient(135deg,#001e0e,#003820,#001208)}
-.pci-3{background:linear-gradient(135deg,#120818,#1e1032,#0c0614)}
-.pc-img::after{content:'';position:absolute;inset:16px;border:1px solid rgba(212,175,55,.1);border-radius:8px;background:rgba(255,255,255,.02)}
+.pc-img{height:170px;position:relative;border-bottom:1px solid rgba(212,175,55,.08);background-size:cover;background-position:center}
+.pc-img::after{content:'';position:absolute;inset:0;background:rgba(12,10,6,.2);pointer-events:none}
 .pc-ov{position:absolute;inset:0;background:rgba(8,8,8,.85);display:flex;align-items:center;justify-content:center;gap:10px;opacity:0;transition:opacity .25s;z-index:10;backdrop-filter:blur(4px)}
 .pc:hover .pc-ov{opacity:1}
 .pc-lnk{width:40px;height:40px;border-radius:50%;background:rgba(212,175,55,.12);border:1.5px solid #d4af37;display:flex;align-items:center;justify-content:center;color:#d4af37;transition:all .2s}
