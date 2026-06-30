@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import heroPhoto from '../../assets/images/hero-photo.jpg'
 import '../../styles/components/Hero.css'
 
 export default function Hero() {
@@ -73,7 +74,7 @@ export default function Hero() {
         <div className="cir cir-6"></div>
         <div className="cir cir-7"></div>
         <div className="h-photo">
-          <div className="h-mono">SM</div>
+          <img src={heroPhoto} alt="Portrait" className="h-photo-img" />
         </div>
         <div className="h-avail">
           <span className="h-avail-dot"></span>
