@@ -1,12 +1,16 @@
 # Solomon CV Portfolio
 
-A modern personal portfolio website built with **React** and **Vite** for showcasing professional skills, projects, experience, testimonials, and contact details.
+A modern personal portfolio website built with **React** and **Vite**, showcasing professional skills, projects, experience, testimonials, and contact details.
+
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ## About
 
-This repository contains the frontend code for Solomon Mwangi's personal CV portfolio website. The design focuses on clean visuals, interactive sections, and fast performance for a polished web presentation.
+This repository contains the frontend code for Solomon Mwangi's personal CV portfolio website. The design focuses on clean visuals, interactive sections, and fast performance to deliver a polished, professional web presentation.
 
-## Features
+## ✨ Features
 
 - Animated hero landing section
 - Skills summary and experience highlights
@@ -15,14 +19,14 @@ This repository contains the frontend code for Solomon Mwangi's personal CV port
 - Smooth scrolling navigation
 - Responsive layout with modern UI interactions
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- React 18
-- Vite 5
+- **React 18**
+- **Vite 5**
 - JavaScript (ESM)
-- CSS modules/styles
+- CSS modules / styles
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Install dependencies
 
@@ -51,25 +55,33 @@ npm run build
 npm run preview
 ```
 
-## Project Structure
+## 📂 Project Structure
 
-- `frontend/src/App.jsx` — main app layout and navigation
-- `frontend/src/components/sections/` — page sections like Hero, About, Skills, Projects, Experience, Testimonials, Contact, CTA
-- `frontend/src/styles/` — global and component-level CSS styles
-- `frontend/index.html` — entry HTML template
+```
+frontend/
+├── src/
+│   ├── App.jsx              # Main app layout and navigation
+│   ├── components/
+│   │   └── sections/        # Hero, About, Skills, Projects,
+│   │                         # Experience, Testimonials, Contact, CTA
+│   └── styles/              # Global and component-level CSS
+└── index.html               # Entry HTML template
+backend/                     # Optional backend API / server code
+```
 
-## Notes
+## 📝 Notes
 
-- The repo currently includes the frontend portfolio site.
-- The site is designed to present a polished personal brand, with placeholders for social links and downloadable CV content.
+- The frontend app is located in `frontend/`.
+- A backend server implementation is available in `backend/`.
+- The portfolio is designed to showcase a polished personal brand, with placeholder links and content ready for customization.
 
-## Community
+## 🤝 Community
 
-- Please follow `CODE_OF_CONDUCT.md` when contributing or opening issues.
-- See `CONTRIBUTING.md` for contribution instructions and development workflow.
-- Report security concerns through `SECURITY.md`.
+- Please follow [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md) when contributing or opening issues.
+- See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contribution instructions and development workflow.
+- Report security concerns through [`.github/SECURITY.md`](./.github/SECURITY.md).
 
-## License
+## 📄 License
 
-This project is available under the [MIT License](LICENSE).
+This project is available under the [MIT License](./LICENSE).
 
