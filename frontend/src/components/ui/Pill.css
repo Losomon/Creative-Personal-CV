@@ -1,0 +1,46 @@
+.pill {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  padding: 5px 14px;
+  display: inline-block;
+  transition: all 0.2s;
+  cursor: default;
+}
+.pill:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  color: #d4af37;
+  background: rgba(212, 175, 55, 0.06);
+}
+.pill-skill {
+  font-size: 10px;
+  color: rgba(212, 175, 55, 0.8);
+  background: rgba(212, 175, 55, 0.07);
+  border: 1px solid rgba(212, 175, 55, 0.17);
+  border-radius: 5px;
+  padding: 3px 9px;
+  letter-spacing: 0.02em;
+}
+.pill-tag {
+  font-size: 11px;
+  color: rgba(212, 175, 55, 0.8);
+  background: rgba(212, 175, 55, 0.07);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 5px;
+  padding: 4px 10px;
+}
+.pill-cat {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  z-index: 5;
+  font-size: 9.5px;
+  color: #d4af37;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.24);
+  border-radius: 20px;
+  padding: 3px 10px;
+  letter-spacing: 0.04em;
+}

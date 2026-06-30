@@ -1,0 +1,27 @@
+.card {
+  background: rgba(14, 12, 7, 0.9);
+  border: 1.5px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 26px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.27s;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0), transparent);
+  transition: background 0.3s;
+}
+.card-hover:hover {
+  border-color: rgba(212, 175, 55, 0.28);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.5);
+}
+.card-hover:hover::before {
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}

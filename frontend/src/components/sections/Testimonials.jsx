@@ -1,3 +1,4 @@
+import '../../styles/components/Testimonials.css'
 export default function Testimonials() {
   return (
     <section id="testimonials" className="reveal">

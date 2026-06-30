@@ -1,10 +1,11 @@
+import '../../styles/components/Projects.css'
 export default function Projects() {
   const TABS = [
-    { key: 'featured', label: 'Featured', icon: '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>' },
-    { key: 'dashboard', label: 'Dashboard', icon: '<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>' },
-    { key: 'database', label: 'Database', icon: '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>' },
-    { key: 'uiux', label: 'UI/UX Design', icon: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/>' },
-    { key: 'tools', label: 'Tools & Others', icon: '<path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>' }
+    { key: 'featured', label: 'Featured', paths: '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>' },
+    { key: 'dashboard', label: 'Dashboard', paths: '<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>' },
+    { key: 'database', label: 'Database', paths: '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>' },
+    { key: 'uiux', label: 'UI/UX Design', paths: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/>' },
+    { key: 'tools', label: 'Tools & Others', paths: '<path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>' }
   ];
 
   return (
@@ -28,7 +29,9 @@ export default function Projects() {
       <div className="ptabs">
         {TABS.map((tab, index) => (
           <button key={tab.key} className={`ptab${index === 0 ? ' on' : ''}`}>
-            <span dangerouslySetInnerHTML={{ __html: tab.icon }} />
+            <svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" strokeWidth="2" fill="none">
+              <g dangerouslySetInnerHTML={{ __html: tab.paths }} />
+            </svg>
             {tab.label}
           </button>
         ))}

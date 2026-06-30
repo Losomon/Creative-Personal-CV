@@ -1,0 +1,15 @@
+.social-link {
+  border-radius: 11px;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.44);
+  transition: all 0.22s;
+  text-decoration: none;
+}
+.social-link:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+  transform: translateY(-2px);
+}
