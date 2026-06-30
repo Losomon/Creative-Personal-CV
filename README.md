@@ -8,7 +8,7 @@ A modern, dark-themed personal portfolio website built with **React** and **Vite
 
 ## Preview
 
-![Portfolio Preview](./frontend/src/assets/images/preview.png)
+![Portfolio Preview](../frontend/src/assets/images/preview.png)
 
 ## About
 
